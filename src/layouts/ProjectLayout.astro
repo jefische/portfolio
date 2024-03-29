@@ -1,19 +1,16 @@
 ---
-import { type StoreSchema } from "../content/config";
+import { type ProjectSchema } from "../content/config";
 import BaseLayout from "./BaseLayout.astro";
 import dayjs from "dayjs";
 import localizedFormat from "dayjs/plugin/localizedFormat";
 
-export interface Props extends StoreSchema {}
+export interface Props extends ProjectSchema {}
 
 const {
   title,
   description,
   updatedDate,
   heroImage,
-  pricing,
-  oldPricing,
-  checkoutUrl,
   badge,
   custom_link,
   custom_link_label,
@@ -32,16 +29,16 @@ import { Image } from "astro:assets";
           <Image width={750} height={422} format="webp" src={heroImage} alt={title} class="w-full mb-6" />
         )
       }
-      <div class="">
-        <h1 class="title my-2 text-4xl font-bold">
+      <div class="flex place-content-between">
+        <h1 class="flex title my-2 text-4xl font-bold">
           {title}
-          {badge && <div class="badge badge-secondary mx-2">{badge}</div>}
+          {badge && <div class="badge badge-secondary mx-5 self-center">{badge}</div>}
         </h1>
-        <div class="flex place-content-between items-center">
-          <div class="grow md:grow-0">
-            <span class="text-xl mr-1"> {pricing}</span>
-            <span class="text-md opacity-50 line-through">{oldPricing}</span>
-          </div>
+        <!-- <div class="flex place-content-between items-center"> -->
+          <!-- <div class="grow md:grow-0"> -->
+            <!-- <span class="text-xl mr-1"> {pricing}</span> -->
+            <!-- <span class="text-md opacity-50 line-through">{oldPricing}</span> -->
+          <!-- </div> -->
           <div>
             {
               custom_link && (
@@ -50,9 +47,9 @@ import { Image } from "astro:assets";
                 </a>
               )
             }
-            <a class="btn btn-primary grow md:grow-0 ml-4" href={checkoutUrl} target="_blank">Buy Now</a>
+            <!-- <a class="btn btn-primary grow md:grow-0 ml-4" href={checkoutUrl} target="_blank">Buy Now</a> -->
           </div>
-        </div>
+        <!-- </div> -->
       </div>
       <div class="divider my-2"></div>
       <slot />
