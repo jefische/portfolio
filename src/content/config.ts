@@ -16,6 +16,7 @@ const projectSchema = z.object({
     description: z.string(),
     custom_link_label: z.string(),
     custom_link: z.string().optional(),
+    github_link: z.string().optional(),
     updatedDate: z.coerce.date(),
     badge: z.string().optional(),
     heroImage: z.string().optional(),
