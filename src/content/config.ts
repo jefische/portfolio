@@ -20,6 +20,12 @@ const projectSchema = z.object({
     updatedDate: z.coerce.date(),
     badge: z.string().optional(),
     heroImage: z.string().optional(),
+    tagsJS: z.array(z.string()).refine(items => new Set(items).size === items.length, {
+        message: 'tags must be unique',
+    }).optional(),
+    tagsCSS: z.array(z.string()).refine(items => new Set(items).size === items.length, {
+        message: 'tags must be unique',
+    }).optional(),
 });
 
 export type BlogSchema = z.infer<typeof blogSchema>;
