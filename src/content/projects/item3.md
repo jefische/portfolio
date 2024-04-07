@@ -5,7 +5,7 @@ custom_link_label: "Live Site"
 custom_link: "https://talongungrips.com/"
 # github_link: "https://github.com/jefische/tennis-vpn"
 updatedDate: "September 2023"
-heroImage: "/talon-logo.png"
+heroImage: "/cropped-talon-logo-white.png"
 tagsJS: ["Big Commerce"]
 tagsCSS: ["SCSS"]
 ---
