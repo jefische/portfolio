@@ -6,9 +6,9 @@ custom_link: "https://tic-tac-toe-jf.netlify.app/"
 github_link: "https://github.com/jefische/Tic-Tac-Toe"
 updatedDate: "Mar 29 2024"
 badge: "Featured"
-heroImage: "/TTT_game_60.png"
+heroImage: "/TTT_game_60_v2.png"
 tagsJS: ["Vanilla JS"]
-tagsCSS: ["plain CSS"]
+tagsCSS: ["SCSS"]
 ---
 
 This is a custom built tic-tac-toe web application. The application has options to play against a computer that makes random moves, or against an intelligent computer player which implements the well known minimax algorithm. If choosing to play against the intelligent computer player, there is an added feature to view the minimax algorithm decision tree at certain points throughout the game.
