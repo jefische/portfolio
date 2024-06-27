@@ -22,6 +22,12 @@ const {
 dayjs.extend(localizedFormat);
 const displayDate = dayjs(updatedDate).format("ll");
 import { Image } from "astro:assets";
+
+let visible = true;
+
+if (!custom_link_label) {
+	visible = false;
+}
 ---
 
 <BaseLayout title={title} description={description} image={heroImage}>
@@ -43,12 +49,12 @@ import { Image } from "astro:assets";
             <!-- <span class="text-md opacity-50 line-through">{oldPricing}</span> -->
           <!-- </div> -->
           <div>
-            {
+            {visible ?
               custom_link && (
                 <a class="btn btn-outline grow md:grow-0 ml-4" href={custom_link} target="_blank">
                   {custom_link_label}
                 </a>
-              )
+              ) : <a></a>
             }
             <a class="btn btn-primary grow md:grow-0 ml-4" href={github_link} target="_blank">Github</a>
           </div>

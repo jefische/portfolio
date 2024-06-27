@@ -3,10 +3,10 @@ title: "Total Tennis TV"
 description: "A blog and guide to watching tennis online in 2024."
 custom_link_label: "Live Site"
 custom_link: "https://totaltennis.tv/"
-github_link: "https://github.com/jefische/tennis-vpn"
+github_link: "https://github.com/jefische/tennis-vpn-react"
 updatedDate: "Dec 11 2023"
-heroImage: "/Total-Tennis.png"
-tagsJS: ["Vanilla JS"]
+heroImage: "/Sports_Tennis-3200x1800.jpg"
+tagsJS: ["React.js"]
 tagsCSS: ["Bootstrap"]
 ---
 

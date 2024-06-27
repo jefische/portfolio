@@ -16,8 +16,9 @@ const last_posts = posts.slice(0, 3);
     <div class="text-3xl py-3 font-bold">Web Developer and Data Analyst</div>
     <div class="py-2">
       <text class="text-lg">
-        Welcome to my Personal Portfolio Website built with Astro and TailwindCSS. I'm a data analyst and web developer
-        constantly learning with the latest technologies. Find some of my projects and work below!
+        Welcome to my Personal Portfolio Website built with Astro and TailwindCSS. I currently work as a contracted web 
+		developer and am looking to transition to a full time role with a company.  Additionally, I have formal training and experience 
+		as a data analyst, and am constantly learning new technologies. Find some of my projects and work below!
       </text>
     </div>
   </div>
@@ -28,7 +29,7 @@ const last_posts = posts.slice(0, 3);
 
   <HorizontalCard
     title="Tic-Tac-Toe"
-    img="/cropped-tic-tac.webp"
+    img="/TTT_game_60_v2.png"
     desc="A custom built tic-tac-toe web application with an added educational feature for the minimax algorithm."
     url="/projects/item1"
     badge="Vanilla JS"
@@ -36,10 +37,18 @@ const last_posts = posts.slice(0, 3);
   <div class="divider my-0"></div>
   <HorizontalCard
     title="How to Watch Tennis Online"
-    img="/cropped-tennis-racquet-and-ball.webp"
+    img="/Sports_Tennis-3200x1800.jpg"
     desc="A blog and guide to watching professional tennis online using a VPN."
     url="/projects/item2"
     badge="bootstrap"
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Central Oregon Irrigation District"
+    img="/COID.PNG"
+    desc="Client water rights application rebuild with BlueChannel, Inc."
+    url="/projects/item4"
+    badge="PHP"
   />
   <div class="divider my-0"></div>
   <HorizontalCard
@@ -47,14 +56,14 @@ const last_posts = posts.slice(0, 3);
     img="/cropped-talon-logo-white.png"
     desc="Client e-commerce site rebuild with BlueChannel, Inc."
     url="/projects/item3"
-    badge="Handlebars"
+    badge="SCSS"
   />
 
-  <div>
+  <!-- <div>
     <div class="text-3xl w-full font-bold mb-5 mt-10">Latest blog posts</div>
-  </div>
+  </div> -->
 
-  {
+  <!-- {
     last_posts.map((post) => (
       <>
         <HorizontalCard
@@ -68,5 +77,5 @@ const last_posts = posts.slice(0, 3);
         <div class="divider my-0" />
       </>
     ))
-  }
+  } -->
 </BaseLayout>
