@@ -23,10 +23,15 @@ dayjs.extend(localizedFormat);
 const displayDate = dayjs(updatedDate).format("ll");
 import { Image } from "astro:assets";
 
-let visible = true;
+let visible = true, git = true;
+
 
 if (!custom_link_label) {
 	visible = false;
+}
+
+if (!github_link) {
+	git = false;
 }
 ---
 
@@ -56,7 +61,11 @@ if (!custom_link_label) {
                 </a>
               ) : <a></a>
             }
-            <a class="btn btn-primary grow md:grow-0 ml-4" href={github_link} target="_blank">Github</a>
+			{git ?
+				github_link && (
+				<a class="btn btn-primary grow md:grow-0 ml-4" href={github_link} target="_blank">Github</a>
+				) : <a></a>
+			  }
           </div>
         <!-- </div> -->
       </div>

@@ -2,8 +2,8 @@
 title: "Central Oregon Irrigation District"
 description: "Custom interal application rebuild with BlueChannel, Inc."
 custom_link_label: ""
-custom_link: "https://talongungrips.com/"
-# github_link: "https://github.com/jefische/tennis-vpn"
+custom_link: ""
+github_link: ""
 updatedDate: "May 2024"
 heroImage: "/COID.PNG"
 tagsJS: ["PHP"]
@@ -12,7 +12,11 @@ tagsCSS: ["Bootstrap"]
 
 The Central Oregon Irrigation District (COID) is a state chartered organization that contracted with my employer, BlueChannel, to rebuild their water rights desktop application into a web based application. Using a LAMP stack I was tasked with helping build the frontend prototype and coordinating with the client on feedback and desired functionality.
 
-The prototype was broken out into roughly 40 modules representing each of the screens required. Below is a snapshot of one of the Patron screens.
+The prototype was broken out into roughly 40 modules representing each of the screens required. 
+
+<!-- Below is a snapshot of one of the application screens. -->
+
+<!-- ![](/COID_WINN_2.0.png) -->
 
 Much of the challenge to this project was understanding how the current system populates data in each module and translating that to the new application. The modules I focused on were data intensive and required displaying information in tables and card formats. Using bootstrap classes, and html table elements I ensured consistency with layouts and proper display of data to align with COID's system requirements. 
 
