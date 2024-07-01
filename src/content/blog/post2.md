@@ -1,6 +1,6 @@
 ---
 title: "CSS Printing"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+description: "Styling COID reports for printing - how to handle table headers and footers spanning multiple pages"
 pubDate: "April 30 2024"
 heroImage: "/post_img.webp"
 ---

@@ -1,57 +1,42 @@
 ---
-title: "Demo Post 3"
+title: "React Ideas"
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-pubDate: "Sep 12 2022"
+pubDate: "Jun 29 2024"
 heroImage: "/post_img.webp"
 badge: "Demo badge"
 tags: ["rust","tokio"]
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer
-malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas
-pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse
-platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada
-fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea
-dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst
-quisque sagittis purus sit amet.
+In React, component specific memory is called state. How a component remembers data or content that it is rendering.
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum
-quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet.
-Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus.
-Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit
-ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt
-dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus
-arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed
-tempus urna et pharetra pharetra massa massa ultricies mi.
+App.js is my root component file. If using a framework like Next.js this has file-based routing where the
+root component will be different for every page.
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam
-sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec.
-Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna
-fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et
-egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel
-turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra
-nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim
-praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus
-egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam
-ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor
-purus non. Amet dictum sit amet justo donec enim.
+Some core rules and concepts to remember:
+1 - React components are Javascript functions that you can sprinkle with markup. Components are essentially resuable UI elements for your app.
+2 - Components automatically re-render whenever there is a change in their state or props. Props are the
+single argument that React component functions accept (a props object).
+3 - Local variables don't persist between renders.
+4 - Changes to local variables won't trigger renders.
+5 - Hooks are functions that give you access to React's internal memory and are only available during a render.
+6 - Hooks allow you to retain data between renders with state variables, update state variables, and trigger React to render the component again using state setter functions.
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut
-consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra.
-Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor
-dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor
-dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque
-eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices
-tincidunt arcu. Id cursus metus aliquam eleifend mi.
+On initial render, hooks are available such as setState(0). If such a hook is defined then the hook function will return an array with a state variable and state setter function. Then when say an event is fired it can call the state setter function which will cause a change in the components state and trigger another render. So then the hook becomes available again and React will remember that you changed the state variable to return the updated variable along with the setter function again.
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus
-imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu
-cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt
-dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat
-sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida.
-Egestas integer eget aliquet nibh praesent tristique magna.
+3 steps - first trigger a render, render the component meaning react will call the function component whose state update triggered the render, then react commits changes to the DOM by using the appendChild() DOM API. React will apply the minimal necessary operations to make the DOM match the latest rendering output.
+
+In my own words, there's an initial render that is processed when createRoot function is called, and the root element is rendered. This causes a chain reaction wherein all nested function components will also run and React will commit all changes to the DOM where after the brower will render the page to the user. Subsequent renders happen when say an event handler is fired and a setter function is run to update a state variable. This update to state triggers another render of that component and components nested inside it (though there are some efficiencies here where React will only update what's necessary). When the function component is run then any hooks become available which at that point React will remember the updated state and return the updated state variables accordingly along with the setter functions again. After the function has completed, React again commits changes to the DOM where needed (using appendChild), and the browser can render the new content to the user. This cycle goes on perpetually as long as the user is interacting with the page.
+
+State as a snapshot sounds like function closure where state variables are set for each render independently and React remembers the variable value in memory at that time. When a state variable is changed, it will be updated for the next render, not the current one. Event handlers created in the past have the state values from the render in which they were created.
+
+Queueing a Series of State Updates
+
+queueing can be uncommon but good to understand.
+batching - where React processes state updates after event handlers have finished running. When going through the processing React handles updates in the queue in the order received.
+updater functions are added to the queue and can behave to update state multiple times within one render.
+
+React does not batch across multiple intentional events like clicks - each click is handled separately. In the example however, with a setTimeOut function at 3 seconds, if the button is clicked two times quickly then the same state is used in both renders, so the buy will only register +1 and not +2. To register both buy actions we need to use an updater function.
+
+Updating Objects in State
+
+It is best to treat objects as immutable when using them with state. This means to create new copies of the object and triggering a render based on the copy. Mutating an object in state will not trigger a render. Checkout the Immer library for easier implementation of changing nested objects and keeping your code less verbose.
