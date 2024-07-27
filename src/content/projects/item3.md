@@ -18,9 +18,9 @@ The prototype was broken out into roughly 40 modules representing each of the sc
 
 <!-- ![](/COID_WINN_2.0.png) -->
 
-Much of the challenge to this project was understanding how the current system populates data in each module and translating that to the new application. The modules I focused on were data intensive and required displaying information in tables and card formats. Using bootstrap classes, and html table elements I ensured consistency with layouts and proper display of data to align with COID's system requirements. 
+Much of the challenge to this project was understanding how the current system populates data in each module and how that would translate to the new application. The modules I focused on were data intensive and required displaying information in tables and custom card formats. Using bootstrap classes, and html table elements I ensured consistency with layouts and proper display of data to align with the client's system requirements. 
 
-I spent a lot of time in the old WINN system, studying how each screen worked and what data was required to display in different sections of the application. This required documenting processes and requirments along the way for future application development once the prototype was complete. I stubbed out inital passes of my interpretation of a particular module, hooking up some basic routing, modals, and toasts to make the prototype interactive and allow the client to see a functional example. 
+I spent a lot of time in the client's legacy desktop application, studying how each screen worked and what data was required to display in different sections of the application. This required documenting processes and requirments along the way that would be essential for the backend developers once the prototype was complete. For the prototype, I stubbed out inital interpretations of particular modules, hooking up some basic routing, modals, and toasts to make the prototype interactive and allow the client to see a functional example and provide feedback. The process took about 6 months of back and forth with the client to dial in the front end as best as possible. 
 
-I also drafted 20+ financial and water right reports in HTML/CSS for printing from within the web application.
+During the prototyping process, I also drafted 20+ financial and water right reports in HTML/CSS for printing from within the application.  As I was drafting the reports, this gave the client the opportunity to request changes to current reports, remove some reports all together, and add new reports. 
 

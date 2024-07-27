@@ -31,12 +31,39 @@ State as a snapshot sounds like function closure where state variables are set f
 
 Queueing a Series of State Updates
 
-queueing can be uncommon but good to understand.
-batching - where React processes state updates after event handlers have finished running. When going through the processing React handles updates in the queue in the order received.
-updater functions are added to the queue and can behave to update state multiple times within one render.
+Queueing can be uncommon but good to understand.
+Batching - where React processes state updates after event handlers have finished running. When going through the processing React handles updates in the queue in the order received.
+Updater functions are added to the queue and can behave to update state multiple times within one render.
 
 React does not batch across multiple intentional events like clicks - each click is handled separately. In the example however, with a setTimeOut function at 3 seconds, if the button is clicked two times quickly then the same state is used in both renders, so the buy will only register +1 and not +2. To register both buy actions we need to use an updater function.
 
 Updating Objects in State
 
 It is best to treat objects as immutable when using them with state. This means to create new copies of the object and triggering a render based on the copy. Mutating an object in state will not trigger a render. Checkout the Immer library for easier implementation of changing nested objects and keeping your code less verbose.
+
+Updating Arrays in State
+
+Similar to objects, it's best to treat arrays as immutable when using them with state. Thus create copies using functions like map, filter, and the spread operator or slice. Don't use mutating functions like splice, reverse, and sort.
+
+Imperative vs Declarative UI programming
+
+Imperative programming is where you code your application describing each interaction explicitly. You have to code your event handlers and functionality telling the UI how to update at every step. You write exact instructions to manipulate the UI based on what just happened. It's called imperative because you have to command each element and tell the browser how to update the UI. This works for isolated environments, but quickly gets over complicated in more complex applications. Bugs came pop up easily like you forgetting to hide something, or disable something based on user interaction.
+
+Imperative code is also harder to read and follow the logic. It's scattered in a way that React declarative code isn't.
+
+Declarative programming you code the logic separately. First you code the components and the markup to describe each state, then you add the logic to trigger the renders for each state afterwards. This lets you mockup and quickly iterate on the UI before wiring up any logic. 
+
+Declarative programming means describing the UI for each visual state rather than micromanaging the UI (imperative).
+
+Try to consolidate state variables to avoid duplication. Reducers let you unify multiple state variables into a single object.
+
+Remember how to deal with event stop propagation if a click handler has a parent element or div with an onClick as well.
+
+7/8/24 - Choosing the State Structure
+
+Managing state can be confusing when dealing with forms, user inputs, checkboxes, and event handlers. Might need to review this section again in the future. Also find a way to incorporate this into my tennis website for practice.
+
+
+
+
+
