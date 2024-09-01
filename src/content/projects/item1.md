@@ -1,18 +1,14 @@
 ---
-title: "Tic Tac Toe"
-description: "Custom tic tac toe web application with an added educational feature for the minimax algorithm."
+title: "Total Tennis TV"
+description: "A blog and guide to watching tennis online in 2024."
 custom_link_label: "Live Site"
-custom_link: "https://tic-tac-toe-jf.netlify.app/"
-github_link: "https://github.com/jefische/Tic-Tac-Toe"
-updatedDate: "Mar 29 2024"
+custom_link: "https://totaltennis.tv/"
+github_link: "https://github.com/jefische/tennis-vpn-react"
+updatedDate: "Dec 11 2023"
+heroImage: "/Sports_Tennis-3200x1800.jpg"
 badge: "Featured"
-heroImage: "/TTT_game_60_v2.png"
-tagsJS: ["Vanilla JS"]
-tagsCSS: ["SCSS"]
+tagsJS: ["React.js"]
+tagsCSS: ["Bootstrap"]
 ---
 
-This is a custom built tic-tac-toe web application. The application has options to play against a computer that makes random moves, or against an intelligent computer player which implements the well known minimax algorithm. If choosing to play against the intelligent computer player, there is an added feature to view the minimax algorithm decision tree at certain points throughout the game. The decision tree is implemented using the [p5.js](https://p5js.org/) library.
-
-Note that the tree is drawn and can be shown to the user when there are roughly 60 or fewer game states to generate (i.e. 60 or fewer calls to the minimax function). For sense of scale, when the game is started, if the intelligent computer player goes first, there are 549,945 calls to the minimax function. If the user goes first, this number drops down to 63,904 function calls as there are only 7 moves for the computer to consider. Once the number of available moves is 4 or less, visualization of the tree becomes more or less possible. Note there are some situations where with 4 moves left, 64 game states must be generated which does overcrowd the visual somewhat.
-
-To see more details on how the decision tree is drawn please checkout the [wiki](https://github.com/jefische/Tic-Tac-Toe/wiki/Drawing-the-Decision-Tree) for this project on github.
+This web project helps tennis fans navigate an alternative for watching tennis online. The site is setup as a single page web application with blog articles on how to watch professional tennis tournaments online and affiliate links for a vpn product. Everything is built entirely from scratch using React.js and Bootstrap for styling. Code is bundled for production using Vite and hosted on a Namecheap server.

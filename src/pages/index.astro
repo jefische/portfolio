@@ -16,7 +16,7 @@ const last_posts = posts.slice(0, 3);
     <div class="text-3xl py-3 font-bold">Web Developer</div>
     <div class="py-2">
       <text class="text-lg">
-        Welcome to my Personal Portfolio built with Astro and TailwindCSS. I currently work part-time as a contract web 
+        Welcome to my Personal Portfolio built with Astro and Tailwind CSS. I currently work part-time as a contract web 
 		developer and am looking to transition to a full time role with a company. Additionally, I have formal training and experience 
 		as a data analyst, and am constantly learning new technologies. Find some of my projects and work below!
       </text>
@@ -27,20 +27,21 @@ const last_posts = posts.slice(0, 3);
     <div class="text-3xl w-full font-bold mb-2">My latest projects {"</>"}</div>
   </div>
 
-  <HorizontalCard
-    title="Tic-Tac-Toe"
-    img="/TTT_game_60_v2.png"
-    desc="A custom built tic-tac-toe web application with an added educational feature for the minimax algorithm."
-    url="/projects/item1"
-    badge="Vanilla JS"
-  />
   <div class="divider my-0"></div>
   <HorizontalCard
     title="How to Watch Tennis Online"
     img="/Sports_Tennis-3200x1800.jpg"
     desc="A blog and guide to watching professional tennis online using a VPN."
+    url="/projects/item1"
+    badgeHome={["React.js"]}
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Minimax Algorithm"
+    img="/TTT_tree_13_v2.png"
+    desc="A custom built tic-tac-toe web application with an added educational feature to dynamically draw the decision tree for the minimax algorithm."
     url="/projects/item2"
-    badge="React.js"
+    badgeHome={["Vanilla JS", "p5.js"]}
   />
   <div class="divider my-0"></div>
   <HorizontalCard
@@ -48,7 +49,7 @@ const last_posts = posts.slice(0, 3);
     img="/COID.PNG"
     desc="Client water rights application rebuild with BlueChannel, Inc."
     url="/projects/item3"
-    badge="PHP"
+    badgeHome={["PHP"]}
   />
   <div class="divider my-0"></div>
   <HorizontalCard
@@ -56,7 +57,7 @@ const last_posts = posts.slice(0, 3);
     img="/cropped-talon-logo-white.png"
     desc="Client e-commerce site rebuild with BlueChannel, Inc."
     url="/projects/item4"
-    badge="SCSS"
+    badgeHome={["SCSS"]}
   />
 
   <!-- <div>
