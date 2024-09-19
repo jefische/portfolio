@@ -1,12 +1,12 @@
 ---
 title: "Minimax Algorithm"
-description: "Custom tic tac toe web application with an added educational feature to dynamically draw the decision tree for the minimax algorithm."
+description: "Better understand the minimax algorithm by visualizing the decision tree a computer player takes in a game of tic-tac-toe."
 custom_link_label: "Live Site"
 custom_link: "https://tic-tac-toe-jf.netlify.app/"
 github_link: "https://github.com/jefische/Tic-Tac-Toe"
 updatedDate: "Mar 29 2024"
 heroImage: "/TTT_tree_13_v2.png"
-tagsJS: ["Vanilla JS"]
+tagsJS: ["Javascript"]
 tagsCSS: ["SCSS"]
 ---
 
