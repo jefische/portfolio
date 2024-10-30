@@ -1,10 +1,10 @@
 ---
 title: "React Ideas"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+description: "Notes on state management, and other core concepts in my own words"
 pubDate: "Jun 29 2024"
 heroImage: "/post_img.webp"
-badge: "Demo badge"
-tags: ["rust","tokio"]
+tags: ["state","hooks"]
+order: 7
 ---
 
 In React, component specific memory is called state. How a component remembers data or content that it is rendering.

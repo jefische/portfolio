@@ -4,10 +4,12 @@ description: "Better understand the minimax algorithm by visualizing the decisio
 custom_link_label: "Live Site"
 custom_link: "https://tic-tac-toe-jf.netlify.app/"
 github_link: "https://github.com/jefische/Tic-Tac-Toe"
-updatedDate: "Mar 29 2024"
+updatedDate: "March 29 2024"
 heroImage: "/TTT_tree_13_v2.png"
 tagsJS: ["Javascript"]
 tagsCSS: ["SCSS"]
+order: 3
+cssId: "tttimage"
 ---
 
 This is a custom built tic-tac-toe web application. The application has options to play against a computer that makes random moves, or against an intelligent computer player which implements the well known minimax algorithm. If choosing to play against the intelligent computer player, there is an added feature to view the minimax algorithm decision tree at certain points throughout the game. The decision tree is implemented using the [p5.js](https://p5js.org/) library.

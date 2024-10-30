@@ -3,6 +3,7 @@ title: "CSS Printing"
 description: "Styling COID reports for printing - how to handle table headers and footers spanning multiple pages"
 pubDate: "April 30 2024"
 heroImage: "/post_img.webp"
+order: 9
 ---
 
 For COID we're recreating over 20 financial and water rights reports in HTML and CSS that need to be printable through the web application. A challenge I'm running into is that many of these reports have tables, or table like data, that span multiple pages. A nice feature of html tables is that thead and tfoot will automatically print on each page. However, if information in the header changes, such as in the rotations report, is there a way to use variables so that when a new record is pulled from the database, the header will update the Patron Name?

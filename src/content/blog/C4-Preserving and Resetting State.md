@@ -1,10 +1,11 @@
 ---
-title: "React Concepts"
+title: "React Concepts C4"
 description: "Preserving and Resetting State"
 pubDate: "July 2024"
 heroImage: "/post_img.webp"
-badge: "Demo badge"
+badge: "C4"
 tags: ["rust","tokio"]
+order: 2
 ---
 
 React remembers state based on where a component lies in the render tree. State does not live in the component but rather in React. So React sees <div> <p></p> </div> and will remember the tag rendering order.

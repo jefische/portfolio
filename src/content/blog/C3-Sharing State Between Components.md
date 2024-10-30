@@ -1,10 +1,11 @@
 ---
-title: "React Concepts"
+title: "React Concepts C3"
 description: "Sharing State Between Components"
 pubDate: "July 2024"
 heroImage: "/post_img.webp"
-badge: "Demo badge"
+badge: "C3"
 tags: ["rust","tokio"]
+order: 1
 ---
 
 Remove state from both components and move it to their closest common parent, then pass it down to them via props. This is known as lifting state up, and it's very common in React when coordinating two or more components.

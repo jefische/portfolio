@@ -4,6 +4,7 @@ description: "Working with astro to organize content and create pages dynamicall
 pubDate: "Sep 10 2022"
 heroImage: "/post_img.webp"
 tags: ["astro"]
+order: 10
 ---
 
 You can create entire sets of pages dynamically using .astro files that export a 

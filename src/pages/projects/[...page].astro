@@ -5,11 +5,13 @@ import { getCollection } from "astro:content";
 
 export async function getStaticPaths({ paginate }) {
   const items = await getCollection("projects");
-  items.sort((a, b) => b.data.updatedDate.valueOf() - a.data.updatedDate.valueOf());
+//   items.sort((a, b) => b.data.updatedDate.valueOf() - a.data.updatedDate.valueOf());
+	items.sort((a, b) => a.data.order - b.data.order);
   return paginate(items, { pageSize: 10 });
 }
 // const { page } = Astro.props;
 const items = await getCollection("projects");
+items.sort((a, b) => a.data.order - b.data.order);
 const uniqueTags = [...new Set(items.map((post) => post.data.tagsJS).flat())];
 ---
 

@@ -16,7 +16,8 @@ const {
   custom_link_label,
   github_link,
   tagsJS,
-  tagsCSS
+  tagsCSS,
+  cssId,
 } = Astro.props;
 
 dayjs.extend(localizedFormat);
@@ -40,13 +41,13 @@ if (!github_link) {
     <article class="prose prose-lg max-w-[750px] prose-img:mx-auto">
       {
         heroImage && (
-          <Image width={750} height={422} format="webp" src={heroImage} alt={title} class="w-full mb-6" />
+          <Image id={cssId} width={750} height={422} format="webp" src={heroImage} alt={title} class="w-full mb-6" />
         )
       }
       <div class="flex place-content-between">
         <h1 class="flex title my-2 text-4xl font-bold">
           {title}
-          {badge && <div class="badge badge-secondary mx-5 self-center">{badge}</div>}
+          {badge && <div class="badge badge-secondary mx-3 self-center">{badge}</div>}
         </h1>
         <!-- <div class="flex place-content-between items-center"> -->
           <!-- <div class="grow md:grow-0"> -->

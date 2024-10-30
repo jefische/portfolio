@@ -1,10 +1,11 @@
 ---
 title: "Javascript Concepts"
-description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-pubDate: "Jul 8 2024"
+description: "Notes on promises, git and github."
+pubDate: "July 8 2024"
 heroImage: "/post_img.webp"
-badge: "Demo badge"
+badge: "Javascript"
 tags: ["rust","tokio"]
+order: 8
 ---
 
 7/8/24 - Promises

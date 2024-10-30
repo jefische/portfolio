@@ -4,10 +4,12 @@ description: "Custom interal application rebuild with BlueChannel, Inc."
 custom_link_label: ""
 custom_link: ""
 github_link: ""
-updatedDate: "May 2024"
+updatedDate: "May 1 2024"
 heroImage: "/COID.PNG"
 tagsJS: ["PHP"]
 tagsCSS: ["Bootstrap"]
+order: 4
+cssId: "coidimage"
 ---
 
 The Central Oregon Irrigation District (COID) is a state chartered organization that contracted with my employer, BlueChannel, to rebuild their water rights desktop application into a web based application. Using a LAMP stack I was tasked with helping build the frontend prototype and coordinating with the client on feedback and desired functionality.

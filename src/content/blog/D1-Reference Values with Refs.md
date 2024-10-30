@@ -1,10 +1,11 @@
 ---
-title: "React Concepts"
+title: "React Concepts D1"
 description: "Referencing Values with Refs"
 pubDate: "July 29 2024"
 heroImage: "/post_img.webp"
-badge: "Demo badge"
+badge: "D1"
 tags: ["rust","tokio"]
+order: 5
 ---
 
 Refs are somewhat similar to state in that they can keep track of data between renders of components, however they don't trigger a rerender when updated and do not require a setter function to change the value. If you are displaying data somewhere in the component then best to go with state variables, otherwise Refs are good for just keeping track of something.
