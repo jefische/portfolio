@@ -2,7 +2,7 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import HorizontalCard from "../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
-import createSlug from "../lib/createSlug"
+import createSlug from "../lib/createSlug";
 
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
@@ -10,61 +10,62 @@ const last_posts = posts.slice(0, 3);
 ---
 
 <BaseLayout sideBarActiveItemID="home">
-  <div class="pb-12 mt-5">
-    <div class="text-xl py-1">Hello 👋</div>
-    <div class="text-5xl font-bold">I'm Jeremy Fischer</div>
-    <div class="text-3xl py-3 font-bold">Web Developer</div>
-    <div class="py-2">
-      <text class="text-lg">
-        Welcome to my Personal Portfolio built with Astro and Tailwind CSS. I currently work part-time as a contract web 
-		developer and am looking to transition to a full time role with a company. Additionally, I have formal training and experience 
-		as a data analyst, and am constantly learning new technologies. Find some of my projects and work below!
-      </text>
-    </div>
-  </div>
+	<div class="pb-12 mt-5">
+		<div class="text-xl py-1">Hello 👋</div>
+		<div class="text-5xl font-bold">I'm Jeremy Fischer</div>
+		<div class="text-3xl py-3 font-bold">Web Developer</div>
+		<div class="py-2">
+			<text class="text-lg">
+				Welcome to my Personal Portfolio built with Astro and Tailwind CSS. I currently work part-time as a
+				contract web developer and am looking to transition to a full time role with a company. Additionally, I
+				have formal training and experience as a data analyst, and am constantly learning new technologies. Find
+				some of my projects and work below!
+			</text>
+		</div>
+	</div>
 
-  <div>
-    <div class="text-3xl w-full font-bold mb-2">My latest projects {"</>"}</div>
-  </div>
+	<div>
+		<div class="text-3xl w-full font-bold mb-2">My latest projects {"</>"}</div>
+	</div>
 
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="How to Watch Tennis Online"
-    img="/Sports_Tennis-3200x1800.jpg"
-    desc="A blog and guide to watching professional tennis online using a VPN."
-    url="/projects/item1"
-    badgeHome={["React.js"]}
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Minimax Algorithm"
-    img="/TTT_tree_13_v2.png"
-    desc="Better understand the minimax algorithm by visualizing the decision tree a computer player takes in a game of tic-tac-toe."
-    url="/projects/item2"
-    badgeHome={["Javascript", "p5.js"]}
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Central Oregon Irrigation District"
-    img="/COID.PNG"
-    desc="Client water rights application rebuild with BlueChannel, Inc."
-    url="/projects/item3"
-    badgeHome={["PHP"]}
-  />
-  <div class="divider my-0"></div>
-  <HorizontalCard
-    title="Talon Grips"
-    img="/cropped-talon-logo-white.png"
-    desc="Client e-commerce site rebuild with BlueChannel, Inc."
-    url="/projects/item4"
-    badgeHome={["SCSS"]}
-  />
+	<div class="divider my-0"></div>
+	<HorizontalCard
+		title="How to Watch Tennis Online"
+		img="/Sports_Tennis-3200x1800.jpg"
+		desc="A blog and guide to watching professional tennis online using a VPN."
+		url="/projects/item1"
+		badgeHome={["React.js"]}
+	/>
+	<div class="divider my-0"></div>
+	<HorizontalCard
+		title="Minimax Algorithm"
+		img="/TTT_tree_13_v2.png"
+		desc="Better understand the minimax algorithm by visualizing the decision tree a computer player takes in a game of tic-tac-toe."
+		url="/projects/item2"
+		badgeHome={["Javascript", "p5.js"]}
+	/>
+	<div class="divider my-0"></div>
+	<HorizontalCard
+		title="Central Oregon Irrigation District"
+		img="/COID.PNG"
+		desc="Client water rights application rebuild with BlueChannel, Inc."
+		url="/projects/item3"
+		badgeHome={["PHP"]}
+	/>
+	<div class="divider my-0"></div>
+	<HorizontalCard
+		title="Talon Grips"
+		img="/cropped-talon-logo-white.png"
+		desc="Client e-commerce site rebuild with BlueChannel, Inc."
+		url="/projects/item4"
+		badgeHome={["SCSS"]}
+	/>
 
-  <!-- <div>
+	<!-- <div>
     <div class="text-3xl w-full font-bold mb-5 mt-10">Latest blog posts</div>
   </div> -->
 
-  <!-- {
+	<!-- {
     last_posts.map((post) => (
       <>
         <HorizontalCard

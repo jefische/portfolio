@@ -4,9 +4,9 @@ Made using a free and open-source template built with Astro and TailwindCSS.
 
 ## Tech Stack
 
-- [Astro](https://astro.build)
-- [tailwindcss](https://tailwindcss.com/)
-- [DaisyUI](https://daisyui.com/)
+-   [Astro](https://astro.build)
+-   [tailwindcss](https://tailwindcss.com/)
+-   [DaisyUI](https://daisyui.com/)
 
 ## CV
 

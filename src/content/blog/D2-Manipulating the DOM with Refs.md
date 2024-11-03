@@ -4,7 +4,7 @@ description: "Manipulating the DOM with Refs"
 pubDate: "July 29 2024"
 heroImage: "/post_img.webp"
 badge: "D2"
-tags: ["rust","tokio"]
+tags: ["rust", "tokio"]
 order: 6
 ---
 

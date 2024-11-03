@@ -4,10 +4,10 @@ import HorizontalCard from "../../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
 
 export async function getStaticPaths({ paginate }) {
-  const items = await getCollection("projects");
-//   items.sort((a, b) => b.data.updatedDate.valueOf() - a.data.updatedDate.valueOf());
+	const items = await getCollection("projects");
+	//   items.sort((a, b) => b.data.updatedDate.valueOf() - a.data.updatedDate.valueOf());
 	items.sort((a, b) => a.data.order - b.data.order);
-  return paginate(items, { pageSize: 10 });
+	return paginate(items, { pageSize: 10 });
 }
 // const { page } = Astro.props;
 const items = await getCollection("projects");
@@ -16,27 +16,32 @@ const uniqueTags = [...new Set(items.map((post) => post.data.tagsJS).flat())];
 ---
 
 <BaseLayout title="Project" sideBarActiveItemID="projects">
-  {uniqueTags.map((x) =>  
-    <div class="mb-5">
-      <div class="text-3xl w-full font-bold">{x}</div>
-    </div>
-    <ul>{items.filter((content) => 
-          content.data.tagsJS == x).map((item) => (
-          <>
-            <HorizontalCard
-            title={item.data.title}
-            img={item.data.heroImage}
-            desc={item.data.description}
-            badge={item.data.badge}
-            tags={item.data.tagsCSS}
-            url={"/projects/" + item.slug}
-            custom_link={item.data.custom_link}
-            custom_link_label={item.data.custom_link_label}
-            />
-            <div class="divider my-0" />
-          </>
-        ))
-      }
-    </ul>
-  )}
+	{
+		uniqueTags.map((x) => (
+			<>
+				<div class="mb-5">
+					<div class="text-3xl w-full font-bold">{x}</div>
+				</div>
+				<ul>
+					{items
+						.filter((content) => content.data.tagsJS == x)
+						.map((item) => (
+							<>
+								<HorizontalCard
+									title={item.data.title}
+									img={item.data.heroImage}
+									desc={item.data.description}
+									badge={item.data.badge}
+									tags={item.data.tagsCSS}
+									url={"/projects/" + item.slug}
+									custom_link={item.data.custom_link}
+									custom_link_label={item.data.custom_link_label}
+								/>
+								<div class="divider my-0" />
+							</>
+						))}
+				</ul>
+			</>
+		))
+	}
 </BaseLayout>

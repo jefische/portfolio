@@ -3,7 +3,7 @@ title: "React Ideas"
 description: "Notes on state management, and other core concepts in my own words"
 pubDate: "Jun 29 2024"
 heroImage: "/post_img.webp"
-tags: ["state","hooks"]
+tags: ["state", "hooks"]
 order: 7
 ---
 
@@ -51,7 +51,7 @@ Imperative programming is where you code your application describing each intera
 
 Imperative code is also harder to read and follow the logic. It's scattered in a way that React declarative code isn't.
 
-Declarative programming you code the logic separately. First you code the components and the markup to describe each state, then you add the logic to trigger the renders for each state afterwards. This lets you mockup and quickly iterate on the UI before wiring up any logic. 
+Declarative programming you code the logic separately. First you code the components and the markup to describe each state, then you add the logic to trigger the renders for each state afterwards. This lets you mockup and quickly iterate on the UI before wiring up any logic.
 
 Declarative programming means describing the UI for each visual state rather than micromanaging the UI (imperative).
 
@@ -62,8 +62,3 @@ Remember how to deal with event stop propagation if a click handler has a parent
 7/8/24 - Choosing the State Structure
 
 Managing state can be confusing when dealing with forms, user inputs, checkboxes, and event handlers. Might need to review this section again in the future. Also find a way to incorporate this into my tennis website for practice.
-
-
-
-
-
