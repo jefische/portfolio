@@ -13,3 +13,15 @@ cssId: "TotalTennisimage"
 ---
 
 This web project helps tennis fans navigate an alternative for watching tennis online. The site is setup as a single page web application with blog articles on how to watch professional tennis tournaments online and affiliate links for a vpn product. Everything is built entirely from scratch using React.js and Bootstrap for styling. Code is bundled for production using Vite and hosted on a Namecheap server.
+
+Below are screenshots of the tournament draw components located in the "More -> Tournament Results" section of the website.
+
+Desktop (1920 x 919)
+
+![](/Draws_1920x919.png)
+
+Mobile/Tablet (500 x 779)
+
+![](/Draws_500x779.png)
+
+All tournament data are managed and populated in React components using a combination of hooks for column state management.
