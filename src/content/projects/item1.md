@@ -18,7 +18,7 @@ Below are screenshots of the tournament draw components located in the "More -> 
 
 Desktop (1920 x 919)
 
-![](/Draws_1920x919.png)
+![](/Draws_1920x900.png)
 
 Mobile/Tablet (500 x 779)
 
