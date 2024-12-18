@@ -16,7 +16,7 @@ This web project helps tennis fans navigate an alternative for watching tennis o
 
 Below are screenshots of the tournament draw components located in the "More -> Tournament Results" section of the website.
 
-Desktop (1920 x 919)
+Desktop (1920 x 900)
 
 ![](/Draws_1920x900.png)
 
