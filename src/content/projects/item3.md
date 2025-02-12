@@ -16,9 +16,9 @@ The Central Oregon Irrigation District (COID) is a state chartered organization 
 
 The prototype was broken out into roughly 40 modules representing each of the screens required.
 
-<!-- Below is a snapshot of one of the application screens. -->
+Below is a snapshot of one of the application screens.
 
-<!-- ![](/COID_WINN_2.0.png) -->
+![](/COID_WINN_2.0.png)
 
 Much of the challenge to this project was understanding how the current system populates data in each module and how that would translate to the new application. The modules I focused on were data intensive and required displaying information in tables and custom card formats. Using bootstrap classes, and html table elements I ensured consistency with layouts and proper display of data to align with the client's system requirements.
 
