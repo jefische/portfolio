@@ -7,7 +7,7 @@ import createSlug from "../../lib/createSlug";
 export async function getStaticPaths({ paginate }) {
 	const posts = await getCollection("blog");
 	//   posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
-	posts.sort((a, b) => a.data.order - b.data.order);
+	posts.sort((a, b) => b.data.order - a.data.order);
 	return paginate(posts, { pageSize: 10 });
 }
 
@@ -33,6 +33,11 @@ const { page } = Astro.props;
 							title={post.data.title}
 							img={post.data.heroImage}
 							desc={post.data.description}
+							pubDate={post.data.pubDate.toLocaleDateString("en-US", {
+								month: "long",
+								day: "numeric",
+								year: "numeric",
+							})}
 							url={"/hidden-blog/" + createSlug(post.data.title, post.slug)}
 							target="_self"
 							badge={post.data.badge}
