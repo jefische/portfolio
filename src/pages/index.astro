@@ -11,14 +11,14 @@ const last_posts = posts.slice(0, 3);
 
 <BaseLayout sideBarActiveItemID="home">
 	<div class="pb-12 mt-5">
-		<div class="text-xl py-1">Hello 👋</div>
-		<div class="text-5xl font-bold">I'm Jeremy Fischer</div>
+		<!-- <div class="text-xl py-1">Hello 👋</div> -->
+		<div class="text-5xl font-bold">Jeremy Fischer</div>
 		<div class="text-3xl py-3 font-bold">Web Developer</div>
 		<div class="py-2">
 			<text class="text-lg">
-				Welcome to my personal portfolio! I am a contract front-end developer with formal training and
-				experience as a data analyst. As a lifelong learner, I am always exploring new technologies. Check out
-				some of my projects and work below!
+				I'm a contract front-end developer with a strong foundation and formal training in data analysis. I’m
+				passionate about building clean, user-focused web applications and continuously expanding my skill set
+				by exploring new technologies. Feel free to browse my projects below to see what I’ve been working on.
 			</text>
 		</div>
 	</div>
@@ -27,6 +27,14 @@ const last_posts = posts.slice(0, 3);
 		<div class="text-3xl w-full font-bold mb-2">My latest projects {"</>"}</div>
 	</div>
 
+	<div class="divider my-0"></div>
+	<HorizontalCard
+		title="Tennis Database"
+		img="/tennis-database.png"
+		desc="A full-stack web application for browsing and filtering a curated collection of full-length professional tennis match videos"
+		url="/projects/item6"
+		badgeHome={["React.js", "Express.js", "MongoDB"]}
+	/>
 	<div class="divider my-0"></div>
 	<HorizontalCard
 		title="Wildlife Center of Virginia"
@@ -60,14 +68,14 @@ const last_posts = posts.slice(0, 3);
 		url="/projects/item3"
 		badgeHome={["HTML", "CSS", "PHP"]}
 	/>
-	<div class="divider my-0"></div>
+	<!-- <div class="divider my-0"></div>
 	<HorizontalCard
 		title="Minimax Algorithm"
 		img="/TTT_tree_13_v2.png"
 		desc="Better understand the minimax algorithm by visualizing the decision tree a computer player takes in a game of tic-tac-toe."
 		url="/projects/item2"
 		badgeHome={["Javascript", "p5.js"]}
-	/>
+	/> -->
 
 	<!-- <div>
     <div class="text-3xl w-full font-bold mb-5 mt-10">Latest blog posts</div>

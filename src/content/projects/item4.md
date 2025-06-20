@@ -8,7 +8,7 @@ updatedDate: "September 1 2023"
 heroImage: "/cropped-talon-logo-white.png"
 tagsJS: ["Big Commerce"]
 tagsCSS: ["SCSS"]
-order: 3
+order: 4
 cssId: "Talonimage"
 ---
 
