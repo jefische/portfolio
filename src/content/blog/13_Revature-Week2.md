@@ -57,9 +57,23 @@ An abstract class is a class that is declared abstract — it may or may not inc
 An abstract class can have 0 or more abstract methods, but if a class has at least one abstract method then the whole class has to be abstract.
 Why use an abstract class? The major reason is to provide a template for other classes to start from, via inheritance.
 
-Interfaces - they are similar to abstract classes but where a class can only inherit one other class, a calls can implement as many interfaces as needed. Abstract classes are for creating templates, and Interfaces are for creating behaviors for classes.
+Interfaces - they are similar to abstract classes but where a class can only inherit one other class, a class can implement as many interfaces as needed. Abstract classes are for creating templates, and Interfaces are for creating behaviors for classes.
 
 Lists - Interfaces which implement the Collections interface. Lists are ordered collections. They cannot be instantiated as an object alone, they require one of the subclasses such as ArrayList or LinkedList.
 
 Integer.parseInt(str[0]) can be used to convert string representation of numbers (i.e. "31") to integers.
 String.valueOf() can be used to convert integers into strings (i.e. from 31 to "31").
+
+6/26/25
+
+mySQL Notes:
+
+Data Definition Language (DDL) - CREATE, DROP, ALTER, RENAME, TRUNCATE, COMMENT
+Data Modification Language (DML) - INSERT, UPDATE, DELETE
+
+Data Control Language (DCL) - GRANT, REVOKE
+Transaction Control Language (TCL) - COMMIT, ROLLBACK, SAVEPOINT
+
+Data Query Language (DQL) - SELECT. The JOIN clause is part of the DQL.
+
+JDBC - Java Database Connectivity is a low-level API used to write Java code that interacts with relational databases via SQL
