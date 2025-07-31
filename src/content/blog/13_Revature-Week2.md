@@ -68,6 +68,8 @@ String.valueOf() can be used to convert integers into strings (i.e. from 31 to "
 
 mySQL Notes:
 
+Structured Query Language (SQL)
+
 Data Definition Language (DDL) - CREATE, DROP, ALTER, RENAME, TRUNCATE, COMMENT
 Data Modification Language (DML) - INSERT, UPDATE, DELETE
 
@@ -77,3 +79,20 @@ Transaction Control Language (TCL) - COMMIT, ROLLBACK, SAVEPOINT
 Data Query Language (DQL) - SELECT. The JOIN clause is part of the DQL.
 
 JDBC - Java Database Connectivity is a low-level API used to write Java code that interacts with relational databases via SQL
+
+7/2/25
+
+Functional interfaces are interfaces with only one abstract method. They can be implemented using lambda expressions as well (like one line function definitions)
+Lambda expressions are a concise way to represent an instance of a functional interface: (parameter list) -> expression.
+
+7/29/25
+Spring Framework simplifies Java programming by creating modular, scalable code through decoupling and dependency injection.
+
+The Inversion of Control (IoC) container, represented by the Bean Factory and the Application Context, manages object creation and assembly behind the scenes.
+
+The ApplicationContext extends the capabilities of the Bean Factory, providing infrastructure services,
+dependency injection, and application configuration.
+
+The decoupling through dependency injection simplifies maintenance, testing, and scalability of the application.
+
+Applications are typically broken in a Web Layer, Service Layer, and Database Layer.
