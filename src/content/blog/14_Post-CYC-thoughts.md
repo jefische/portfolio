@@ -4,7 +4,7 @@ description: "Contributing to open source, what I want to be known for, and next
 pubDate: "Sep 28 2025"
 heroImage: "/post_img.webp"
 badge: "Professional Development"
-tags: ["CYC""]
+tags: ["CYC"]
 order: 14
 ---
 
