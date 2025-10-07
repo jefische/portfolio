@@ -8,7 +8,7 @@ tags: ["CYC"]
 order: 14
 ---
 
-# Initial thoughts on CYC
+## Initial thoughts on CYC
 
 On the second day of the Commit Your Code conference, hosted at Yum! Brands International headquarters in Plano, Texas, the keynote opening speech was delivered by Aaron Francis. Aaron is a Laravel developer and a great speaker.
 
@@ -20,7 +20,7 @@ Choose something I want to explore, a technical topic, something that I find int
 
 Aaron decided to be known as the database guy for PHP apps. In his previous career as an account, he was the spreadsheet guy. That's what he started writing and talking about online.
 
-- Algorithms: Like exploring minimax and talking about the use cases?
+- Algorithms: For example exploring minimax and talking about the use cases
 - MCP servers
 - Data visualizations and chart.js
 - Mapbox and leaflet for mappings
