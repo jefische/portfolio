@@ -24,6 +24,7 @@ const projectSchema = z.object({
 	updatedDate: z.coerce.date(),
 	badge: z.string().optional(),
 	heroImage: z.string().optional(),
+	imgBg: z.string().optional(),
 	tagsJS: z
 		.array(z.string())
 		.refine((items) => new Set(items).size === items.length, {
@@ -36,7 +37,7 @@ const projectSchema = z.object({
 			message: "tags must be unique",
 		})
 		.optional(),
-	order: z.number(),
+	order: z.number().optional(),
 	cssId: z.string(),
 });
 

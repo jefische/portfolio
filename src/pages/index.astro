@@ -7,6 +7,23 @@ import createSlug from "../lib/createSlug";
 const posts = (await getCollection("blog")).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
 
 const last_posts = posts.slice(0, 3);
+
+// Fetch projects and sort by order
+const projects = (await getCollection("projects")).sort((a, b) => a.data.order - b.data.order);
+
+// Create a map for easy lookup by title
+const projectMap = new Map(projects.map((p) => [p.data.title, p]));
+
+// Helper function to get project URL by title
+const getProjectUrl = (title: string) => {
+	const project = projectMap.get(title);
+	return project ? `/projects/${project.slug}` : "#";
+};
+
+// Or get projects by index (sorted by order)
+const getProjectByOrder = (order: number) => {
+	return projects.find((p) => p.data.order === order);
+};
 ---
 
 <BaseLayout sideBarActiveItemID="home">
@@ -30,10 +47,19 @@ const last_posts = posts.slice(0, 3);
 
 	<div class="divider my-0"></div>
 	<HorizontalCard
+		title="Secret Santa Exchange"
+		img="/secret_santa_exchange_logo.svg"
+		imgBg="#2d3748"
+		desc="AI-powered web application that organizes gift exchanges between groups and generates personalized gift recommendations"
+		url={getProjectUrl("Secret Santa Exchange")}
+		badgeHome={["Next.js", "Supabase", "OpenAI"]}
+	/>
+	<div class="divider my-0"></div>
+	<HorizontalCard
 		title="Tennis Database"
 		img="/tennis-database.png"
 		desc="A full-stack web application for browsing and filtering a curated collection of full-length professional tennis match videos"
-		url="/projects/item6"
+		url={getProjectUrl("Tennis Database")}
 		badgeHome={["React.js", "Express.js", "MongoDB"]}
 	/>
 	<div class="divider my-0"></div>
@@ -41,33 +67,25 @@ const last_posts = posts.slice(0, 3);
 		title="Wildlife Center of Virginia"
 		img="/header-wcv-badge.webp"
 		desc="Civic technology project to digitize hospital animal intake forms."
-		url="/projects/item5"
+		url={getProjectUrl("Wildlife Center of Virginia")}
 		badgeHome={["JavaScript", "Leaflet.js", "Bootstrap"]}
+	/>
+
+	<div class="divider my-0"></div>
+	<HorizontalCard
+		title="Central Oregon Irrigation District"
+		img="/COID.PNG"
+		desc="Client water rights application rebuild with BlueChannel, Inc."
+		url={getProjectUrl("Central Oregon Irrigation District")}
+		badgeHome={["HTML", "CSS", "PHP"]}
 	/>
 	<div class="divider my-0"></div>
 	<HorizontalCard
 		title="How to Watch Tennis Online"
 		img="/Sports_Tennis-3200x1800.jpg"
 		desc="A blog and guide to watching professional tennis online using a VPN."
-		url="/projects/item1"
+		url={getProjectUrl("How to Watch Tennis Online")}
 		badgeHome={["React.js"]}
-	/>
-
-	<div class="divider my-0"></div>
-	<HorizontalCard
-		title="Talon Grips"
-		img="/cropped-talon-logo-white.png"
-		desc="Client e-commerce site rebuild with BlueChannel, Inc."
-		url="/projects/item4"
-		badgeHome={["SCSS", "Figma", "E-Commerce"]}
-	/>
-	<div class="divider my-0"></div>
-	<HorizontalCard
-		title="Central Oregon Irrigation District"
-		img="/COID.PNG"
-		desc="Client water rights application rebuild with BlueChannel, Inc."
-		url="/projects/item3"
-		badgeHome={["HTML", "CSS", "PHP"]}
 	/>
 	<!-- <div class="divider my-0"></div>
 	<HorizontalCard

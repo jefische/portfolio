@@ -1,5 +1,5 @@
 ---
-const { title, img, desc, url, badge, badgeHome, tags, target = "", pubDate } = Astro.props;
+const { title, img, desc, url, badge, badgeHome, tags, target = "", pubDate, imgBg } = Astro.props;
 import { map } from "astro/zod";
 import { Image } from "astro:assets";
 const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
@@ -17,6 +17,7 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
 						format="webp"
 						alt={title}
 						class="max-w-full md:max-w-[13rem] md:h-[117px] rounded-lg bg-base-content"
+						style={imgBg ? `background-color: ${imgBg}; padding: 1rem;` : ""}
 					/>
 				)
 			}
