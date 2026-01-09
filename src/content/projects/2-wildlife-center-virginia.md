@@ -7,6 +7,7 @@ github_link: ""
 updatedDate: "October 30 2024"
 badge: "Code for Charlottesville"
 heroImage: "/header-wcv-badge.webp"
+objectContain: true
 tagsJS: ["Javascript, Webpack"]
 tagsCSS: ["Bootstrap"]
 # order: 2

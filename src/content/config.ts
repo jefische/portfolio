@@ -39,6 +39,7 @@ const projectSchema = z.object({
 		.optional(),
 	order: z.number().optional(),
 	cssId: z.string(),
+	objectContain: z.boolean().optional(),
 });
 
 export type BlogSchema = z.infer<typeof blogSchema>;

@@ -2,17 +2,13 @@
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import HorizontalCard from "../../components/HorizontalCard.astro";
 import { getCollection } from "astro:content";
-
-// Helper to extract order from slug (e.g., "2-tennis-database" → 2)
-const getOrderFromSlug = (slug: string) => {
-	const match = slug.match(/^(\d+)-/);
-	return match ? parseInt(match[1], 10) : 999;
-};
+import getOrderFromSlug from "src/lib/getOrderFromSlug";
 
 export async function getStaticPaths({ paginate }) {
 	const items = await getCollection("projects");
-	//   items.sort((a, b) => b.data.updatedDate.valueOf() - a.data.updatedDate.valueOf());
-	items.sort((a, b) => a.data.order - b.data.order);
+	// items.sort((a, b) => b.data.updatedDate.valueOf() - a.data.updatedDate.valueOf());
+	// items.sort((a, b) => a.data.order - b.data.order);
+	items.sort((a, b) => getOrderFromSlug(a.slug) - getOrderFromSlug(b.slug));
 	return paginate(items, { pageSize: 10 });
 }
 // const { page } = Astro.props;
@@ -38,6 +34,7 @@ const uniqueTags = [...new Set(items.map((post) => post.data.tagsJS).flat())];
 									title={item.data.title}
 									img={item.data.heroImage}
 									imgBg={item.data.imgBg}
+									objectContain={item.data.objectContain}
 									desc={item.data.description}
 									badge={item.data.badge}
 									tags={item.data.tagsCSS}

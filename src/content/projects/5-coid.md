@@ -6,6 +6,8 @@ custom_link: ""
 github_link: ""
 updatedDate: "May 1 2024"
 heroImage: "/COID.PNG"
+imgBg: "#fff"
+objectContain: true
 tagsJS: ["PHP"]
 tagsCSS: ["Bootstrap"]
 # order: 5
