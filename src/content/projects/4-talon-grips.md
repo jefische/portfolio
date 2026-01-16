@@ -6,6 +6,7 @@ custom_link: "https://talongungrips.com/"
 github_link: ""
 updatedDate: "September 1 2023"
 heroImage: "/cropped-talon-logo-white.png"
+badge: "BlueChannel, Inc."
 tagsJS: ["Big Commerce"]
 tagsCSS: ["SCSS"]
 # order: 4

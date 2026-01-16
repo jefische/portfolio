@@ -6,6 +6,7 @@ custom_link: ""
 github_link: ""
 updatedDate: "May 1 2024"
 heroImage: "/COID.PNG"
+badge: "BlueChannel, Inc."
 imgBg: "#fff"
 objectContain: true
 tagsJS: ["PHP"]
