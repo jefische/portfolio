@@ -95,4 +95,11 @@ dependency injection, and application configuration.
 
 The decoupling through dependency injection simplifies maintenance, testing, and scalability of the application.
 
-Applications are typically broken in a Web Layer, Service Layer, and Database Layer.
+Applications are typically broken into a Web Layer, Service Layer, and Database Layer.
+
+1/30/26
+The spring framework handles creation of objects during startup and the application context is the are where these objects are stored? This is the IoC container. Yes, the application context/container/IoC container is a Java Object, which stores other objects/beans, and controls how they're created and wired. Also stores metadata about each bean.
+
+A spring boot application contains the componentscan feature and will look for classes annotated with config, controller, service, bean, component, and maybe some others, then calls the appropriate constructor methods to instantiate them, handles dependency injection by instantiating the classes which are a parameter dependency, (contrustor based injection), which is a sort of nested and recurisive process. By default all beans are singletons so once instance is shard across the application. Verus prototype scopes create a new instance every time the bean is called.
+
+On startup spring boot also handles your environment variables and application.properties setup.
