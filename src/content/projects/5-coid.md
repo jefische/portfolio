@@ -9,13 +9,13 @@ heroImage: "/COID.PNG"
 badge: "BlueChannel, Inc."
 imgBg: "#fff"
 objectContain: true
-tagsJS: ["PHP"]
+tagsJS: ["Javascript"]
 tagsCSS: ["Bootstrap"]
 # order: 5
 cssId: "COIDimage"
 ---
 
-The Central Oregon Irrigation District (COID) is a state chartered organization that contracted with my employer, BlueChannel, to rebuild their water rights desktop application into a web based application. Using a LAMP stack I was tasked with helping build the frontend prototype and coordinating with the client on feedback and desired functionality.
+The Central Oregon Irrigation District (COID) is a state chartered organization that contracted with my employer, BlueChannel, to rebuild their water rights desktop application into a web based application. I was tasked with helping build the frontend prototype and coordinating with the client on feedback and desired functionality.
 
 The prototype was broken out into roughly 40 modules representing each of the screens required.
 
