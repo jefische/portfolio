@@ -28,7 +28,7 @@ Wrapper classes are classes that let you treat primitives as Objects.
 Boxing is the process of converting a primitive to its wrapper class.
 Java has a feature called autoboxing which will automatically convert primitives to wrapper classes implicitly.
 Unboxing is the reverse - converting a wrapper class to its primitive.
-Wrapper classes have static helper methods like .parseX() and .valueOf() for explicit primitive conversion.
+Wrapper classes have static helper methods like `.parseX()` and `.valueOf()` for explicit primitive conversion.
 
     Primitive	Wrapper Class
 
@@ -41,14 +41,14 @@ Wrapper classes have static helper methods like .parseX() and .valueOf() for exp
     float		Float
     double		Double
 
-Wrapper classes have static helper methods like .parseX() and .valueOf() for explicit primitive conversion.
+Wrapper classes have static helper methods like `.parseX()` and `.valueOf()` for explicit primitive conversion.
 Wrapper classes are the like the Object form of a primitive.
 
 Inheritance
 
 **Polymorphism** - method overloading and method overriding
 
-The special Object class, is the parent class of all objects in Java. There are several methods provided to all objects including the unique hashCode() values and equality using .equals() (which was new and a little confusing). Equals() is equivalent to == where we compare memory addresses.
+The special Object class, is the parent class of all objects in Java. There are several methods provided to all objects including the unique hashCode() values and equality using .equals() (which was new and a little confusing). `Equals()` is equivalent to `==` where we compare memory addresses.
 
 **OOP Encapsulation** - hiding instance variables inside of classes using the private keyword/access modifier and using getter/setter methods to access and change them.
 Controlling access to an objects internal state.
@@ -62,10 +62,10 @@ Why use an abstract class? The major reason is to provide a template for other c
 
 **Lists** - Interfaces which implement the Collections interface. Lists are ordered collections. They cannot be instantiated as an object alone, they require one of the subclasses such as ArrayList or LinkedList.
 
-Integer.parseInt(str[0]) can be used to convert string representation of numbers (i.e. "31") to integers.
-String.valueOf() can be used to convert integers into strings (i.e. from 31 to "31").
+`Integer.parseInt(str[0])` can be used to convert string representation of numbers (i.e. "31") to integers.
+`String.valueOf()` can be used to convert integers into strings (i.e. from 31 to "31").
 
-## 6/26/25
+**6/26/25**
 
 mySQL Notes:
 
@@ -81,12 +81,12 @@ Data Query Language (DQL) - SELECT. The JOIN clause is part of the DQL.
 
 JDBC - Java Database Connectivity is a low-level API used to write Java code that interacts with relational databases via SQL
 
-## 7/2/25
+**7/2/25**
 
 **Functional interfaces** are interfaces with only one abstract method. They can be implemented using lambda expressions as well (like one line function definitions)
 Lambda expressions are a concise way to represent an instance of a functional interface: (parameter list) -> expression.
 
-## 7/29/25
+**7/29/25**
 
 Spring Framework simplifies Java programming by creating modular, scalable code through decoupling and dependency injection.
 
@@ -99,7 +99,7 @@ The decoupling through dependency injection simplifies maintenance, testing, and
 
 Applications are typically broken into a Web Layer, Service Layer, and Database Layer.
 
-## 1/30/26
+**1/30/26**
 
 The spring framework handles creation of objects during startup and the application context is the are where these objects are stored? This is the IoC container. Yes, the application context/container/IoC container is a Java Object, which stores other objects/beans, and controls how they're created and wired. Also stores metadata about each bean.
 
