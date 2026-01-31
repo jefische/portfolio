@@ -9,7 +9,7 @@ heroImage: "/COID.PNG"
 badge: "BlueChannel, Inc."
 imgBg: "#fff"
 objectContain: true
-tagsJS: ["Javascript"]
+tagsJS: ["JavaScript"]
 tagsCSS: ["Bootstrap"]
 # order: 5
 cssId: "COIDimage"

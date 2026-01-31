@@ -8,7 +8,7 @@ updatedDate: "October 30 2024"
 badge: "Code for Charlottesville"
 heroImage: "/header-wcv-badge.webp"
 objectContain: true
-tagsJS: ["Javascript, Webpack"]
+tagsJS: ["JavaScript"]
 tagsCSS: ["Bootstrap"]
 # order: 2
 cssId: "WCVimage"
