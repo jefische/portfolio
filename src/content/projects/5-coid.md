@@ -10,7 +10,7 @@ badge: "BlueChannel, Inc."
 imgBg: "#fff"
 objectContain: true
 tagsJS: ["JavaScript"]
-tagsCSS: ["Bootstrap"]
+tagsCSS: ["jQuery", "PHP", "Bootstrap"]
 # order: 5
 cssId: "COIDimage"
 ---

@@ -6,6 +6,7 @@ custom_link: "https://totaltennis.tv/"
 github_link: "https://github.com/jefische/tennis-vpn-react"
 updatedDate: "December 11 2023"
 heroImage: "/Sports_Tennis-3200x1800.jpg"
+badge: "Personal"
 tagsJS: ["React.js"]
 tagsCSS: ["Bootstrap"]
 # order: 3

@@ -1,6 +1,6 @@
 ---
 title: "Secret Santa Exchange"
-description: "Secret Santa Exchange (Elecretanta) is an AI-powered web application that organizes gift exchanges between groups and generates personalized gift recommendations based on recipient profiles, preferences, and budget constraints."
+description: "Elecretanta is an AI-powered web application that organizes gift exchanges between groups and generates personalized gift recommendations based on recipient profiles, preferences, and budget constraints."
 custom_link_label: "Live Site"
 custom_link: "https://www.secretsanta-exchange.com/"
 github_link: "https://github.com/LetsGetTechnical/elecretanta"
@@ -9,7 +9,7 @@ heroImage: "/secret_santa_exchange_logo.svg"
 imgBg: "#2d3748"
 badge: "Gridiron Survivor Apprenticeship"
 tagsJS: ["Next.js"]
-tagsCSS: ["Tailwind CSS"]
+tagsCSS: ["Supabase", "OpenAI"]
 # order: 1
 cssId: "TTTimage"
 ---

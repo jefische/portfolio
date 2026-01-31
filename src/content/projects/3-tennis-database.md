@@ -5,10 +5,10 @@ custom_link_label: "Live Site"
 custom_link: "https://tennis-database-java.fly.dev"
 github_link: "https://github.com/jefische/tennis-database-java"
 updatedDate: "June 20 2025"
-badge: ""
+badge: "Personal"
 heroImage: "/tennis-database.png"
 tagsJS: ["React.js"]
-tagsCSS: ["Bootstrap"]
+tagsCSS: ["Java Spring Boot", "Python Flask", "MySQL", "Docker"]
 # order: 2
 cssId: ""
 ---

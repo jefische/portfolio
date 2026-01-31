@@ -6,8 +6,9 @@ custom_link: "https://tic-tac-toe-jf.netlify.app/"
 github_link: "https://github.com/jefische/Tic-Tac-Toe"
 updatedDate: "March 29 2024"
 heroImage: "/TTT_tree_13_v2.png"
+badge: "Personal"
 tagsJS: ["JavaScript"]
-tagsCSS: ["SCSS"]
+tagsCSS: ["p5.js", "SCSS"]
 # order: 6
 cssId: "TTTimage"
 ---

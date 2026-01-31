@@ -9,7 +9,7 @@ badge: "Code for Charlottesville"
 heroImage: "/header-wcv-badge.webp"
 objectContain: true
 tagsJS: ["JavaScript"]
-tagsCSS: ["Bootstrap"]
+tagsCSS: ["Leaflet.js", "Bootstrap"]
 # order: 2
 cssId: "WCVimage"
 ---
