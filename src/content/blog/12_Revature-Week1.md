@@ -1,5 +1,5 @@
 ---
-title: "Revature - Week 1"
+title: "Revature Week 1"
 description: "Notes on OS, threads, and processing"
 pubDate: "Jun 3 2025"
 heroImage: "/post_img.webp"
@@ -8,7 +8,7 @@ tags: ["react.js", "state management"]
 order: 12
 ---
 
-OS Fundamentals
+## OS Fundamentals
 
 Threading is an interesting concept which is the flow of a programs execution. It includes a program's execution stack which is basically the ordered list of operations to execute next in a program. Threading also contains the current working variables, and execution history.
 

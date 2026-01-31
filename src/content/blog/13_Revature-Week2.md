@@ -1,5 +1,5 @@
 ---
-title: "Revature - Week 2"
+title: "Revature Week 2"
 description: "Notes on Stack and Heap memory, casting, classes, and objects"
 pubDate: "Jun 5 2025"
 heroImage: "/post_img.webp"
@@ -10,24 +10,25 @@ order: 13
 
 **Stack and Heap Memory**
 
-    Variable references are stored in Stack Memory. New objects instantiated are stored in Heap Memory.
+Variable references are stored in Stack Memory. New objects instantiated are stored in Heap Memory.
 
 **Garbage Collection**
 
-    Garbage collection is the process of removing objects from the heap which have no references to them.
-    Java abstracts the details away from the developer by allowing the JVM to handle memory management itself.
-    Garbage collection is run in the background by the JVM. There is no way we can explicitly force garbage collection to happen, but we can request garbage collection to be run through the use of one of the following:
-    	System.gc()
-    	Runtime.getRuntime().gc()
-    	System.runFinalize()
+Garbage collection is the process of removing objects from the heap which have no references to them.
+Java abstracts the details away from the developer by allowing the JVM to handle memory management itself.
+Garbage collection is run in the background by the JVM. There is no way we can explicitly force garbage collection to happen, but we can request garbage collection to be run through the use of one of the following:
+
+    System.gc()
+    Runtime.getRuntime().gc()
+    System.runFinalize()
 
 **Wrapper Classes**
 
-    Wrapper classes are classes that let you treat primitives as Objects.
-    Boxing is the process of converting a primitive to its wrapper class.
-    Java has a feature called autoboxing which will automatically convert primitives to wrapper classes implicitly.
-    Unboxing is the reverse - converting a wrapper class to its primitive.
-    Wrapper classes have static helper methods like .parseX() and .valueOf() for explicit primitive conversion.
+Wrapper classes are classes that let you treat primitives as Objects.
+Boxing is the process of converting a primitive to its wrapper class.
+Java has a feature called autoboxing which will automatically convert primitives to wrapper classes implicitly.
+Unboxing is the reverse - converting a wrapper class to its primitive.
+Wrapper classes have static helper methods like .parseX() and .valueOf() for explicit primitive conversion.
 
     Primitive	Wrapper Class
 
@@ -40,8 +41,8 @@ order: 13
     float		Float
     double		Double
 
-    Wrapper classes have static helper methods like .parseX() and .valueOf() for explicit primitive conversion.
-    Wrapper classes are the like the Object form of a primitive.
+Wrapper classes have static helper methods like .parseX() and .valueOf() for explicit primitive conversion.
+Wrapper classes are the like the Object form of a primitive.
 
 Inheritance
 
