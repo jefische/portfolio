@@ -21,6 +21,7 @@ const featuredProjects = [
 		title: "Secret Santa Exchange",
 		img: "/secret_santa_exchange_logo.svg",
 		imgBg: "#2d3748",
+		imgContain: true,
 		desc: "AI-powered web application that organizes gift exchanges and generates personalized gift recommendations.",
 		tags: ["Next.js", "Supabase", "OpenAI"],
 		url: getProjectUrl("Secret Santa Exchange"),
@@ -85,8 +86,8 @@ const skills = {
 		</p>
 
 		<p class="hero-bio mt-5 animate-fade-up stagger-4">
-			Contract software developer with formal training in data analysis. I build clean, user-focused web
-			applications and love exploring new technologies. Browse my work below — or check out my <a
+			Currently a contract software developer with formal training in data analysis. I build clean, user-focused
+			web applications and love exploring new technologies. Browse my work below — or check out my <a
 				href="/cv"
 				class="text-[--accent-glow] hover:underline underline-offset-4">CV</a
 			> for the full picture.
@@ -136,7 +137,7 @@ const skills = {
 								height={250}
 								format="webp"
 								alt={project.title}
-								class={project.imgContain ? "object-contain" : ""}
+								class={project.imgContain ? "object-contain" : "object-cover"}
 								style={project.imgBg ? `background-color: ${project.imgBg}; padding: 1rem;` : ""}
 							/>
 						</div>
