@@ -1,5 +1,5 @@
 ---
-title: "Javascript Concepts"
+title: "JavaScript Concepts"
 description: "Notes on promises, git and github."
 pubDate: "July 8 2024"
 heroImage: "/post_img.webp"

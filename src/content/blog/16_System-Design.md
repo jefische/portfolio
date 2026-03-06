@@ -39,3 +39,8 @@ rest, graphql, sockets (client to server)
 how to scale - read from queue can have multiple processes read from them (can scale horizontally in non-blocking way - important for big data systems)
 
 when do you use relational store, doc store, big table, index, and cache (redis).
+
+Goal, get employed in C1 McLean.
+Need to study Leetcode and case study.
+Need clear head
+Need to fix my relationship, either divorcing or committing.
