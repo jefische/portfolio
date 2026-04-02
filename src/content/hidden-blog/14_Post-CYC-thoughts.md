@@ -18,12 +18,11 @@ His speech was motivational and focused around how newer developers trying to br
 
 Choose something I want to explore, a technical topic, something that I find interesting and start writing about it. Have a voice about it online. Don't worry about being an expert, just start learning and talking about it. And if it turns out it's not something you really enjoy talking about, switch and choose something else.
 
-Aaron decided to be known as the database guy for PHP apps. In his previous career as an account, he was the spreadsheet guy. That's what he started writing and talking about online.
+Aaron decided to be known as the database guy for PHP apps. In his previous career as an accountant, he was the spreadsheet guy. That's what he started writing and talking about online.
 
 - Algorithms: For example exploring minimax and talking about the use cases
 - MCP servers
 - Data visualizations and chart.js
 - Mapbox and leaflet for mappings
 - D3, Chart.js, Three.js
-
-
+- Java topics:

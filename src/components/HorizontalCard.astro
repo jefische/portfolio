@@ -1,7 +1,38 @@
 ---
 import { map } from "astro/zod";
 import { Image } from "astro:assets";
-const { title, img, desc, url, badge, badgeHome, tags, target = "", pubDate, imgBg, objectContain } = Astro.props;
+
+interface Props {
+	title: string;
+	img?: string;
+	desc: string;
+	url: string;
+	badge?: string;
+	badgeHome?: string[];
+	tags?: string[];
+	target?: string;
+	pubDate?: string;
+	imgBg?: string;
+	objectContain?: boolean;
+	objectCover?: boolean;
+	custom_link?: string;
+	custom_link_label?: string;
+}
+
+const {
+	title,
+	img,
+	desc,
+	url,
+	badge,
+	badgeHome,
+	tags,
+	target = "",
+	pubDate,
+	imgBg,
+	objectContain,
+	objectCover,
+} = Astro.props;
 const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
 ---
 
@@ -16,7 +47,7 @@ const tag_url = url.split("/").slice(0, -1).join("/") + "/tag";
 						height={422}
 						format="webp"
 						alt={title}
-						class={`max-w-full md:max-w-[13rem] md:h-[117px] rounded-lg bg-base-content ${objectContain ? "object-contain" : ""}`}
+						class={`max-w-full md:max-w-[13rem] md:h-[117px] rounded-lg bg-base-content ${objectContain ? "object-contain" : ""} ${objectCover ? "object-cover" : ""}`}
 						style={imgBg ? `background-color: ${imgBg}; padding: 1rem;` : ""}
 					/>
 				)

@@ -13,6 +13,8 @@ const blogSchema = z.object({
 		})
 		.optional(),
 	order: z.number(),
+	objectContain: z.boolean().optional(),
+	objectCover: z.boolean().optional(),
 });
 
 const projectSchema = z.object({
@@ -49,6 +51,7 @@ const blogCollection = defineCollection({ schema: blogSchema });
 const projectCollection = defineCollection({ schema: projectSchema });
 
 export const collections = {
+	"hidden-blog": blogCollection,
 	blog: blogCollection,
 	projects: projectCollection,
 };
