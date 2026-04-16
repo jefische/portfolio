@@ -2,7 +2,7 @@
 title: "Tennis Database"
 description: "A full-stack web application for browsing and filtering a curated collection of full-length professional tennis match videos"
 custom_link_label: "Live Site"
-custom_link: "https://tennis-database-java.fly.dev"
+custom_link: "https://tennisreplay.tv"
 github_link: "https://github.com/jefische/tennis-database-java"
 updatedDate: "June 20 2025"
 badge: "Personal"
