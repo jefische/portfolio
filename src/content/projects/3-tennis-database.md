@@ -13,14 +13,22 @@ tagsCSS: ["Java Spring Boot", "Python Flask", "MySQL", "Docker"]
 cssId: ""
 ---
 
-This full-stack web application is a searchable database of full-length professional tennis match videos. Users can easily search and filter matches by player names, tournaments, and surface types to quickly find relevant content.
+This full-stack web application is a searchable database of full-length professional tennis match videos. Users can easily search and filter matches by player names, tournaments, and years to quickly find relevant content.
 
-The frontend is built with React and Bootstrap, using Vite for fast development and bundling. Filter state and search input are managed using React’s useState hook, allowing for a smooth and responsive user experience.
+The frontend is built with **React** + **Typescript** and leverages **Shadcn** with **Tailwind CSS** for modern accessible components. Filtering state and search inputs are managed using React’s native hooks, while all CRUD operations for adding and editing videos utilize **React Hook Form**.
 
-The backend is powered by Java Spring Boot and MySQL, handling API requests and storing match metadata. The app is deployed via fly.io for fast and reliable hosting.
+The backend is powered by **Java Spring Boot** and **MySQL**, handling API requests and storing match metadata. Admin login authorization is also implemented using **JWT** and **Spring Security**.
 
-The codebase is structured as a monorepo, with clearly separated client and server directories for frontend and backend logic.
+The app is deployed via **fly.io** which uses **Docker** images to define the runtime environment and Firecracker microVMs for deployment.
 
-Below is a snapshot of the main archive section.
+Finally, there is also a separate microservice developed in **Python** to leverage **LangChain** and incorporate AI-generated match summaries of video transcripts.
+
+Below is a snapshot of the main archive section on desktop and mobile.
+
+### Desktop
 
 ![](/tennis-database-archive.png)
+
+### Mobile
+
+![](/tennis-database-archive-mobile.jpeg)
