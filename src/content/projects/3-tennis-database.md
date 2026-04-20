@@ -1,5 +1,5 @@
 ---
-title: "Tennis Database"
+title: "Tennis Video Database"
 description: "A full-stack web application for browsing and filtering a curated collection of full-length professional tennis match videos"
 custom_link_label: "Live Site"
 custom_link: "https://tennisreplay.tv"
@@ -13,7 +13,7 @@ tagsCSS: ["Java Spring Boot", "Python Flask", "MySQL", "Docker"]
 cssId: ""
 ---
 
-This full-stack web application is a searchable database of full-length professional tennis match videos. Users can easily search and filter matches by player names, tournaments, and years to quickly find relevant content.
+This full-stack web application is a searchable database of full-length professional tennis match videos sourced from Youtube. Tennis fans enjoy rewatching older professional matches but find it difficult to search for free content online in a systematic way. With [Tennis Replay](https://tennisreplay.tv) users can easily search and filter matches by player names, tournaments, and years to quickly find relevant content.
 
 The frontend is built with **React** + **Typescript** and leverages **Shadcn** with **Tailwind CSS** for modern accessible components. Filtering state and search inputs are managed using React’s native hooks, while all CRUD operations for adding and editing videos utilize **React Hook Form**.
 
@@ -23,12 +23,19 @@ The app is deployed via **fly.io** which uses **Docker** images to define the ru
 
 Finally, there is also a separate microservice developed in **Python** to leverage **LangChain** and incorporate AI-generated match summaries of video transcripts.
 
-Below is a snapshot of the main archive section on desktop and mobile.
+Below are screenshots of the main archive section on desktop and mobile.
 
-### Desktop
+### Desktop Dark Mode
 
-![](/tennis-database-archive.png)
+![](/tennis-database-archive-dark.png)
 
-### Mobile
+### Desktop Light Mode
 
-![](/tennis-database-archive-mobile.jpeg)
+![](/tennis-database-archive-light.png)
+
+### Mobile Dark and Light Modes
+
+<div class="tennis-db-mobile-img-container">
+    <img src="/tennis-database-archive-mobile-dark.jpeg" width="365" alt="Mobile dark mode view of archive page" />
+    <img src="/tennis-database-archive-mobile-light.jpeg" width="365" alt="Mobile light mode view of archive page" />
+</div>

@@ -447,6 +447,18 @@ code,
 	width: 400px;
 }
 
+.tennis-db-mobile-img-container {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+@media (min-width: 1200px) {
+	.tennis-db-mobile-img-container {
+		flex-direction: row;
+	}
+}
+
 /* ============================================
    NOISE TEXTURE OVERLAY (subtle)
    ============================================ */
