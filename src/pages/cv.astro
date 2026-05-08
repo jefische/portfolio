@@ -67,7 +67,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 			</ul>
 			<br />
 		</TimeLineElement>
-		<TimeLineElement
+		<!-- <TimeLineElement
 			title="Data Analyst at Fors Marsh Group"
 			subtitle="April 2016 to August 2019 - Arlington, Virginia"
 		>
@@ -84,7 +84,7 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 				</li>
 				<li>Assisted with ETL data migration for 1.2M personnel records from IBM mainframe to SQL database.</li>
 			</ul>
-		</TimeLineElement>
+		</TimeLineElement> -->
 	</div>
 
 	<!-- <div class="mb-5">
@@ -99,21 +99,6 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
       <a href="#" target="_blank"> Certification Name (with link)</a>
     </li>
   </ul> -->
-
-	<div class="mb-5">
-		<div class="text-3xl w-full font-bold">Education</div>
-	</div>
-
-	<div class="time-line-container grid gap-4 mb-10">
-		<TimeLineElement
-			title="M.S. Statistics"
-			subtitle="2019 to 2022 at George Mason University - Fairfax, Virginia"
-		/>
-		<TimeLineElement
-			title="B.S. Mathematics"
-			subtitle="2012 to 2014 at Arizona State University - Tempe, Arizona"
-		/>
-	</div>
 
 	<div class="mb-5">
 		<div class="text-3xl w-full font-bold">Volunteer</div>
@@ -193,23 +178,38 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 	</div>
 
 	<div class="mb-5">
+		<div class="text-3xl w-full font-bold">Education</div>
+	</div>
+
+	<div class="time-line-container grid gap-4 mb-10">
+		<TimeLineElement
+			title="M.S. Statistics"
+			subtitle="2019 to 2022 at George Mason University - Fairfax, Virginia"
+		/>
+		<TimeLineElement
+			title="B.S. Mathematics"
+			subtitle="2012 to 2014 at Arizona State University - Tempe, Arizona"
+		/>
+	</div>
+
+	<div class="mb-5">
 		<div class="text-3xl w-full font-bold">Tech Stack</div>
 	</div>
 
 	<ul class="list-disc md:columns-5 columns-2 mx-6">
 		<li>Next.js</li>
 		<li>React.js</li>
-		<li>Node.js</li>
+		<li>Tailwind CSS</li>
 		<li>Java</li>
 		<li>Spring Boot</li>
 		<!-- <li>MongoDB</li> -->
 		<li>MySQL</li>
-		<li>Supabase</li>
+		<li>Docker</li>
 		<li>Git</li>
 		<li>Vite</li>
 	</ul>
 
-	<div class="mt-5">
+	<!-- <div class="mt-5">
 		<div class="text-3xl w-full font-bold">Data Analysis Skills</div>
 	</div>
 
@@ -220,5 +220,5 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
 		<li>Hypothesis testing</li>
 		<li>ANOVA tables</li>
 		<li>Generalized Linear Modeling</li>
-	</ul>
+	</ul> -->
 </BaseLayout>
