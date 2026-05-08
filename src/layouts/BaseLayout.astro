@@ -22,6 +22,7 @@ const {
 	<head>
 		<BaseHead title={title} description={description} image={image} , ogType={ogType} />
 		{TRANSITION_API && <ViewTransitions />}
+		<slot name="head" />
 	</head>
 	<body>
 		<div class="bg-base-100 drawer lg:drawer-open">
