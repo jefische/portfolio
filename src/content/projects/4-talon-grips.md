@@ -13,7 +13,9 @@ tagsCSS: ["SCSS"]
 cssId: "Talonimage"
 ---
 
-Talon Grips is a Colorado based small business manufacturing and selling gun grips for customers online and with approved dealers. After my employer, BlueChannel, provided a proof of concept design for the client, a full site rebuild of their e-commerce site began using a Big Commerce platform which gave me exposure to HTML handlebars. As a frontend developer I was tasked with primarily helping translate the figma styling to code using a combination of traditional CSS and SCSS for better readability and variable management.
+Talon Grips is a Colorado based small business manufacturing and selling gun grips for customers online and with approved dealers. After my employer, BlueChannel, provided a proof of concept design for the client, a full site rebuild of their e-commerce site began using BigCommerce which gave me exposure to HTML handlebars. As a frontend developer I was tasked with primarily helping translate the figma styling to code using HTML, CSS, JavaScript, and PHP in a monolithic setup with the BigCommerce platform.
+
+I have also worked on SEO analysis with BigCommerce analytics and GA4 to assist the client with marketing and growth strategies.
 
 Below is a snapshot of a product carousel on the home page.
 

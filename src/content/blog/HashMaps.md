@@ -37,7 +37,7 @@ $$P(X = k) = e^{-\alpha} \frac{\alpha^k}{k!}$$
 
 ## The results
 
-With 100,000 unique keys spread across 262,144 buckets, the empirical average comes out to α ≈ 0.381.
+With 100,000 random keys spread across 262,144 buckets, the empirical average comes out to α ≈ 0.381.
 
 | Statistic            | Value   |
 | -------------------- | ------- |
@@ -83,3 +83,5 @@ For 262,144 buckets, this predicts a max bucket size of **4.94**. The empirical 
 The bucket size distribution from a real hashmap simulation is statistically indistinguishable from what you’d expect under perfectly random hashing. This validates the theoretical assumption behind HashMap’s O(1) average-case performance: the hash function spreads keys uniformly enough that collisions follow a predictable, well-behaved distribution.
 
 The Poisson model isn’t just a textbook abstraction — it accurately describes what actually happens inside a HashMap.
+
+I've been practicing #LeetCode and wanted to dig deeper on hashmaps — how random are hash functions really, and how does that lead to O(1) lookups? I ran a simulation and compared the results to the Poisson distribution. Check out my first blog post: https://jfischer.dev/blog/how-random-is-javas-hashmap-really/
