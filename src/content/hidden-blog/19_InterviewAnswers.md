@@ -21,7 +21,7 @@ Also, if the user navigates away from the gift exchange page, the channel closes
 
 ## Other Technical details
 
-The `await Promise.allSettled()` on line 101 of `drawGiftExchange.ts` doesn't hold the thread while waiting for all (i.e. 5 for example) gift suggestions to complete. It suspends the caller, `drawGiftExchange`, and the thread handles whatever else comes through the event loop — including processing the responses from those 5 calls as they come back one by one. The `await` keyword is what suspends the function, which means the remaining code in `drawGiftExchange` — updating the status to active — won't execute until all suggestion calls resolve. And since the `POST` handler is also awaiting `drawGiftExchange`, the HTTP response won't be sent until the entire function completes. Adding the `await` back to the `generateAndStoreSuggestions` part was done by Shashi and Alex _after_ I had pushed up the web socket code.
+The `await Promise.allSettled()` on line 101 of `drawGiftExchange.ts` doesn't hold the thread while waiting for all (i.e. 5 for example) gift suggestions to complete. It suspends the caller, `drawGiftExchange`, and the thread handles whatever else comes through the event loop — including processing the responses from those 5 calls as they come back one by one. The `await` keyword is what suspends the function, which means the remaining code in `drawGiftExchange` — updating the status to active — won't execute until all suggestion calls resolve. And since the `POST` handler is also awaiting `drawGiftExchange`, the HTTP response won't be sent until the entire function completes. Adding the `await` back to the `generateAndStoreSuggestions` part was done by Shashi and Alex _after_ I had pushed up the web socket code. Shashi also added the `Promise.allSettled()` part to wrap `generateAndStoreSuggestions`.
 
 **Asynchronous** — each individual `generateAndStoreSuggestions` call is async. It awaits network calls internally and frees the thread each time.
 **Concurrent** — multiple instances are in-flight at the same time because `assignments.map()` started them all before any of them finished.
@@ -42,6 +42,16 @@ So the full picture:
 **Concurrent but not parallel:** the JS code orchestrating it all (single thread, interleaved)
 **Asynchronous:** the mechanism that makes both possible (freeing the thread at await points)
 In practice, the bottleneck is OpenAI thinking for a few seconds, not the JS thread parsing the response. So it behaves effectively like parallel execution from the user's perspective — all 5 suggestions are being generated at the same time by OpenAI's servers. The single-threaded limitation barely matters here because the JS processing between awaits is trivial compared to the network wait time.
+
+### Verbal explanation
+
+Yeah so, a user experience improvement I worked on for this project involved the gift suggestions generation feature. When a drawing is initiated to randomize pairings of participants, we also generate 3 gift suggestions for the users match based on a profile that's filled out when someone signs up with the application. So when the drawing occurs, in order to see the gift suggestions the user previously had to refresh the page. The UX improvment idea was to eliminate the refresh and have the gift suggestions appear real-time as they get generated and written to the gift_suggestions table.
+
+So we were using Supabase for our backend, and I researched this channel subscription feature, which is built on top of a web socket. And this let's us open a channel to a particular table in the database, have the page we want subscribe to the channel, and listen for INSERT events into the database. So as the suggestions get generated and written to the table, a payload gets sent through the channel to any subscriber, which in our case was a page that was listening, and receivies the payload, which then the client filters the payload to make sure the authenticated user ID matches gift giver id to make sure they're only being shown gifts for the individual they paired with and not other participants in the group.
+
+What happens if a gift generation fails?
+
+-   OpenAI is generating all 3 at once for a user and using a single insert(rows) call.
 
 ## SSR vs CSR
 
